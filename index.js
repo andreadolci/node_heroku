@@ -14,7 +14,7 @@ const server = http.createServer((req, res) => {
       .toString()
       .replace(/{{repl_title}}/gi, process.env.MESSAGE || "Default title")
       .replace(/{{bgcolor}}/gi, process.env.BG_COLOR || "tomato")
-      //.replace(/<!--clock-->/gi, new Date().toString())
+      .replace(/<!--clock-->/gi, new Date().toString())
   );
 });
 
